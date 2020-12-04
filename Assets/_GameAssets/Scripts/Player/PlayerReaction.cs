@@ -10,10 +10,12 @@ public class PlayerReaction : MonoBehaviour
     private Rigidbody2D rb2d;
     private int direccion;
     private bool canJump = true;
+    private Animator _animator;
 
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        _animator = GetComponentInChildren<Animator>();
     }
     public void JumpBack()
     {
@@ -23,6 +25,7 @@ public class PlayerReaction : MonoBehaviour
         Vector2 direccionSalto = new Vector2(fuerzaHorizontal*direccion, fuerzaVertical);
         GetComponent<PlayerMover>().IniciarDespido();
         GetComponent<Rigidbody2D>().AddForce(direccionSalto, ForceMode2D.Impulse);
+        _animator.SetTrigger("Hurting");
 
         //GetComponent<Rigidbody2D>().velocity = direccionSalto;
         canJump = false;
