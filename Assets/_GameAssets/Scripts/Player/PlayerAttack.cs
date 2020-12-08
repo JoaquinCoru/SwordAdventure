@@ -27,7 +27,6 @@ public class PlayerAttack : MonoBehaviour
 		if ((_animator.GetCurrentAnimatorClipInfo(0))[0].clip.name == "Attacking")
 		{
 			_isAttacking = true;
-			print(_isAttacking);
 		}
 		else
 		{

@@ -7,6 +7,7 @@ public class PlayerOrientator : MonoBehaviour
     public FixedJoystick vJoystick;
     float x;
 
+
     private void Awake()
     {
         //Asignación del VIRTUAL JOYSTICK
@@ -14,6 +15,7 @@ public class PlayerOrientator : MonoBehaviour
         {
             vJoystick = GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>();
         }
+        
     }
     void Update()
     {
@@ -29,9 +31,12 @@ public class PlayerOrientator : MonoBehaviour
         if (x > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
+            transform.localPosition = new Vector3(0,0,0);
+            
         } else if (x < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
+            transform.localPosition = new Vector3(-0.167f, 0,0);
         }
     }
 }

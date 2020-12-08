@@ -49,7 +49,7 @@ MonoBehaviour:
   origen: {fileID: 5802344503009804077}
   destino: {fileID: 5802344501908139382}
   objetoAMover: {fileID: 5802344502131690471}
-  speed: 0.25
+  speed: 0.5
   rotate: 0
 --- !u!1 &5802344501908139383
 GameObject:
@@ -151,7 +151,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: a9f008287505a144f8284edc7b19d538, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 90307e57670ef8b4ca033150da28d83c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -348,7 +348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5802344503009804078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.63, y: 0, z: 0}
+  m_LocalPosition: {x: 0.677, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5802344501578079741}

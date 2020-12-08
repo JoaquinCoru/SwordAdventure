@@ -13,7 +13,6 @@ public class Coin : MonoBehaviour
         saliendo = true;
     }
 
-
     private void OnDestroy()
     {
         if (saliendo==false)

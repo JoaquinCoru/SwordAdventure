@@ -197,7 +197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8609a8619f0f6d47a007d740a45fc28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRigidbody: {fileID: 0}
   ortographicSizeMin: 1.5
   ortographicSizeMax: 2
   zoomInSpeed: 1
@@ -213,7 +212,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5675027230150056351}
   - component: {fileID: 5675027230150056348}
-  - component: {fileID: 5675027230150056350}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -285,25 +283,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &5675027230150056350
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5675027230150056349}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5675027230164764513
 GameObject:
   m_ObjectHideFlags: 0

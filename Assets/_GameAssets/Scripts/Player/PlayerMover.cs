@@ -21,6 +21,8 @@ public class PlayerMover : MonoBehaviour
     //Referencia al sound  manager
     private PlayerSoundManager psm;
 
+    private bool enSuelo;
+
 
     private void Awake()
     {
@@ -89,7 +91,7 @@ public class PlayerMover : MonoBehaviour
     public void Saltar()
     {
        
-        if (Mathf.Abs(rigidbody.velocity.y) < 0.01f)
+        if (Mathf.Abs(rigidbody.velocity.y) < 0.01f || enSuelo)
         {
             animator.SetBool("Jumping", true);
             rigidbody.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
@@ -101,6 +103,15 @@ public class PlayerMover : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         estaSiendoDespedido = false;  
-    }           
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        enSuelo = true;
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        enSuelo = false;
+    }
 
 }
