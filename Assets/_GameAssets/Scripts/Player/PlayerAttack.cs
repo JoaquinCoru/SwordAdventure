@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-	private bool _isAttacking=false;
+	public bool _isAttacking=false;
 	private Animator _animator;
 	private Rigidbody2D _rigidbody;
 
