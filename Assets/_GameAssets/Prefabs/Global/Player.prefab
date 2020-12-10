@@ -5058,6 +5058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6dfca8639ed9d42b1e353f97e3bf04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isAttacking: 0
 --- !u!50 &8234445226383698485
 Rigidbody2D:
   serializedVersion: 4
@@ -5238,7 +5239,7 @@ GameObject:
   - component: {fileID: 808191930835384862}
   m_Layer: 8
   m_Name: Base
-  m_TagString: Player
+  m_TagString: Base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

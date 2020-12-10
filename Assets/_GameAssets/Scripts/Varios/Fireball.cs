@@ -6,7 +6,7 @@ public class Fireball : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Player"))
+        if (!collision.CompareTag("Player") && !collision.CompareTag("Espada"))
         {
             if (collision.CompareTag("EnemigoDestruible"))
             {
@@ -14,6 +14,7 @@ public class Fireball : MonoBehaviour
                 Destroy(collision.transform.parent.gameObject);
 
             }
+
             Destroy(gameObject);
         }
 

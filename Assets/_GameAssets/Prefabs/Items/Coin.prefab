@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6d16559b33450dd44b5d98db5b98c6a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -164,4 +164,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flyingPoints: {fileID: 3303598218047136278, guid: 9788b60b8980b884183c1bbcb2706e8e,
     type: 3}
-  puntos: 10
+  puntos: 15

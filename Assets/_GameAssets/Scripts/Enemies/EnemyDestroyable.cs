@@ -9,15 +9,14 @@ public class EnemyDestroyable : Enemy
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Base"))
         {
-            if (!gameObject.CompareTag("Saw"))
-            {
+
                 ReproducirExplosion();
                 collision.GetComponentInParent<Rigidbody2D>().AddForce(Vector2.up * fuerzaRebote, ForceMode2D.Impulse);
                 collision.GetComponentInParent<PlayerSoundManager>().PlayAudioDamage();
                 Destroy(transform.parent.gameObject);
-            }
+         
         }
     }
 }

@@ -8,6 +8,9 @@ public class UIManager : MonoBehaviour
     public Image imagenLlave;
     public Text puntuacion;
 
+    public GameObject panelInfo;
+    public Text textoInfo;
+
     private void Awake()
     {
         puntuacion = GameObject.Find("TextScore").GetComponent<Text>();
@@ -41,6 +44,17 @@ public class UIManager : MonoBehaviour
     public void SetPuntuacion(int points)
     {
         puntuacion.text = points.ToString();
+    }
+
+    public void MostrarMensaje(string mensaje)
+    {
+        panelInfo.SetActive(true);
+        textoInfo.text = mensaje;
+    }
+
+    public void OcultarMensaje()
+    {
+        panelInfo.SetActive(false);
     }
 
 

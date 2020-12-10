@@ -10,11 +10,26 @@ public class Chest : MonoBehaviour
 
     private Animator animator;
     private bool saliendo = false;
+    private bool primerMensaje = true;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         player = GameObject.Find("Player");
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") )
+        {
+            GameObject.Find("GameManager").GetComponent<UIManager>().OcultarMensaje();
+           
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -30,6 +45,7 @@ public class Chest : MonoBehaviour
                 fn.GetComponent<FlyingPoints>().SetPoints(puntos);
             }
         }
+
     }
 
     private void OnApplicationQuit()

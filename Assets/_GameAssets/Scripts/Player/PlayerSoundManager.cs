@@ -12,6 +12,7 @@ public class PlayerSoundManager : MonoBehaviour
     public AudioClip audioDamage;
     public AudioClip audioLand;
     public AudioClip audioInvencible;
+    public AudioClip audioMessage;
 
     //public AudioClip audioDead;
     public AudioClip levelCompleted;
@@ -65,6 +66,11 @@ public class PlayerSoundManager : MonoBehaviour
         audioSource.Pause();
         audioSource.clip = musicLevel;
         audioSource.Play();
+    }
+
+    public void PlayAudioMessage()
+    {
+        audioSource.PlayOneShot(audioMessage);
     }
 
     
