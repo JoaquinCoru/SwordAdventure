@@ -4754,6 +4754,78 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!1 &859395754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 859395755}
+  - component: {fileID: 859395756}
+  m_Layer: 8
+  m_Name: Point Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &859395755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859395754}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7317041, w: 0.68162245}
+  m_LocalPosition: {x: -0.45300007, y: -0.125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 808191930487724393}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &859395756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859395754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1.5
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 92.62
+  m_PointLightOuterAngle: 106.23
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1.1935929
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &808191929911992624
 GameObject:
   m_ObjectHideFlags: 0
@@ -4778,6 +4850,7 @@ GameObject:
   - component: {fileID: 8234445226383698485}
   - component: {fileID: 8234445226383698472}
   - component: {fileID: 955409560}
+  - component: {fileID: 6955512}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -4828,7 +4901,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.507
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5027,6 +5100,7 @@ MonoBehaviour:
   audioDamage: {fileID: 8300000, guid: fb62bb6b66adc004e985284123518dda, type: 3}
   audioLand: {fileID: 8300000, guid: a7fd0c7d9e1423c4a90f0c47218c9dc5, type: 3}
   audioInvencible: {fileID: 8300000, guid: 05fca5392932f8f4e9a2c3d0a98f713b, type: 3}
+  audioMessage: {fileID: 8300000, guid: abcdd7c7d39473f4d82e5647b0f11e1a, type: 3}
   levelCompleted: {fileID: 0}
 --- !u!114 &3309097353892757704
 MonoBehaviour:
@@ -5108,6 +5182,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: {fileID: 567098089}
+--- !u!114 &6955512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808191929911992624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2557313680586e140903d8472136fe96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &808191930487724394
 GameObject:
   m_ObjectHideFlags: 0
@@ -5120,6 +5206,7 @@ GameObject:
   - component: {fileID: 808191930487724391}
   - component: {fileID: 808191930487724392}
   - component: {fileID: 808191930487724390}
+  - component: {fileID: 603976650}
   m_Layer: 8
   m_Name: Model
   m_TagString: Untagged
@@ -5142,6 +5229,7 @@ Transform:
   - {fileID: 8234445226362027518}
   - {fileID: 808191930835384863}
   - {fileID: 567098090}
+  - {fileID: 859395755}
   m_Father: {fileID: 808191929911992589}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5163,7 +5251,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8a30425372ed3cd43a23a9fcd1e0b49e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5227,6 +5315,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vJoystick: {fileID: 0}
+--- !u!114 &603976650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808191930487724394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 1
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.32, y: -0.32, z: 0}
+  - {x: 0.32, y: -0.32, z: 0}
+  - {x: 0.32, y: 0.32, z: 0}
+  - {x: -0.32, y: 0.32, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 26166
 --- !u!1 &808191930835384832
 GameObject:
   m_ObjectHideFlags: 0

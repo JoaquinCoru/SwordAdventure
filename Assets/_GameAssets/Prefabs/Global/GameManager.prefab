@@ -72,4 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8474ce7175899ee4787be5181ea4c0ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imagenLlave: {fileID: 0}
   puntuacion: {fileID: 0}
+  panelInfo: {fileID: 0}
+  textoInfo: {fileID: 0}

@@ -19,6 +19,7 @@ TagManager:
   - Death_Sign
   - Chest
   - CheckPoint
+  - Exit
   layers:
   - Default
   - TransparentFX

@@ -7,11 +7,15 @@ public class PlayerMessages : MonoBehaviour
     private bool primeraSeñalMuerte = true;
     private bool primerCofre = true;
     private bool primerCheckPoint = true;
+    private bool primeraSalida = true;
+
+    private GameManager gameManager;
 
     private PlayerSoundManager psm;
     private void Awake()
     {
         psm = GetComponent<PlayerSoundManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,9 +36,19 @@ public class PlayerMessages : MonoBehaviour
 
         if (collision.gameObject.CompareTag("CheckPoint") && primerCheckPoint)
         {
-            GameObject.Find("GameManager").GetComponent<UIManager>().MostrarMensaje("Esto es un check point para recuperar tu estad");
+            GameObject.Find("GameManager").GetComponent<UIManager>().MostrarMensaje("Esto es un check point para recuperar tu estado");
             primerCheckPoint = false;
             psm.PlayAudioMessage();
+        }
+
+        if (collision.gameObject.CompareTag("Exit") && primeraSalida)
+        {
+            if (!gameManager.hasKey)
+            {
+                GameObject.Find("GameManager").GetComponent<UIManager>().MostrarMensaje("Necesitas la llave para salir del nivel");
+                primeraSalida = false;
+                psm.PlayAudioMessage();
+            }
         }
     }
 

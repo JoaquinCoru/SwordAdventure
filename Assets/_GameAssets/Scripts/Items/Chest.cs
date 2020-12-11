@@ -18,10 +18,6 @@ public class Chest : MonoBehaviour
         player = GameObject.Find("Player");
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-
-    }
 
     private void OnTriggerExit2D(Collider2D collision)
     {

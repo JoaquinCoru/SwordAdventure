@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7496380599349674944}
   m_Layer: 0
   m_Name: Exit
-  m_TagString: Untagged
+  m_TagString: Exit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7496380599349674972}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 17.832, y: -0.02309382, z: 0.6538086}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -121,4 +121,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33cb036e2ea313045b6eb7750be7dd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Scene2
+  sceneName: EndGameScene
