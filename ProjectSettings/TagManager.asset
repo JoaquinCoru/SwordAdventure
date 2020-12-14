@@ -21,6 +21,8 @@ TagManager:
   - CheckPoint
   - Exit
   - ZonaDeteccion
+  - Diamante
+  - Caja
   layers:
   - Default
   - TransparentFX
@@ -31,8 +33,8 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
+  - Player
+  - Box
   - 
   - 
   - 

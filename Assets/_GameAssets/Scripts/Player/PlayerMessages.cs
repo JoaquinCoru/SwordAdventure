@@ -8,6 +8,7 @@ public class PlayerMessages : MonoBehaviour
     private bool primerCofre = true;
     private bool primerCheckPoint = true;
     private bool primeraSalida = true;
+    private bool primerDiamante = true;
 
     private GameManager gameManager;
 
@@ -47,6 +48,16 @@ public class PlayerMessages : MonoBehaviour
             {
                 GameObject.Find("GameManager").GetComponent<UIManager>().MostrarMensaje("Necesitas la llave para salir del nivel");
                 primeraSalida = false;
+                psm.PlayAudioMessage();
+            }
+        }
+
+        if (collision.gameObject.CompareTag("Diamante") && primerDiamante)
+        {
+            if (!gameManager.hasKey)
+            {
+                GameObject.Find("GameManager").GetComponent<UIManager>().MostrarMensaje("Para mover algunas plataformas necesitarás activarlas con interruptores");
+                primerDiamante = false;
                 psm.PlayAudioMessage();
             }
         }

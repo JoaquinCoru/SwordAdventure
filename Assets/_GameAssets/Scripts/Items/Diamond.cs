@@ -2,26 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Switch : MonoBehaviour
+public class Diamond : MonoBehaviour
 {
-    private Animator animator;
+    private PlayerAttack pa;
     [SerializeField]
     private GameObject platform;
     [SerializeField]
     private GameObject light;
+
     private void Awake()
     {
-        animator = GetComponent<Animator>();    
+        pa = GameObject.Find("Player").GetComponent<PlayerAttack>();
+
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Caja"))
+        if (collision.CompareTag("Espada") && pa._isAttacking )
         {
-            animator.SetBool("Activar", true);
             platform.GetComponent<TwoPointsMover>().enabled = true;
             light.SetActive(true);
-            GetComponent<AudioSource>().Play();
         }
     }
 }
