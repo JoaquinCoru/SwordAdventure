@@ -19,8 +19,7 @@ public class PlayerAttack : MonoBehaviour
 		// Wanna Attack?
 		if (Input.GetButtonDown("Fire1")  && _isAttacking == false)
 		{
-			_rigidbody.velocity = Vector2.zero;
-			_animator.SetTrigger("Attacking");
+			Atacar();
 		}
 
 		// Animator
@@ -32,6 +31,12 @@ public class PlayerAttack : MonoBehaviour
 		{
 			_isAttacking = false;
 		}
+	}
+
+	public void Atacar()
+    {
+		_rigidbody.velocity = Vector2.zero;
+		_animator.SetTrigger("Attacking");
 	}
 
 	

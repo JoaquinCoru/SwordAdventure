@@ -19,7 +19,7 @@ public class Switch : MonoBehaviour
         if (collision.gameObject.CompareTag("Caja"))
         {
             animator.SetBool("Activar", true);
-            platform.GetComponent<TwoPointsMover>().enabled = true;
+            platform.GetComponentInChildren<ActivacionIntyPlayer>().Activate();
             light.SetActive(true);
             GetComponent<AudioSource>().Play();
         }

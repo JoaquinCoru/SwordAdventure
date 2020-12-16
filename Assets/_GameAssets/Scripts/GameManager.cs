@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public enum Estado { Menu,Pause, Playing,GameOver}
 
-    private const int TIME_TO_RELOAD = 5;
+    private const int TIME_TO_RELOAD = 4;
 
     [SerializeField]
     private bool useVJoystick;
@@ -115,9 +115,16 @@ public class GameManager : MonoBehaviour
             txtgameOver.SetActive(true);
             StopAllCoroutines();
             player.SetActive(false);
-            Invoke(nameof(LoadCoverScene), TIME_TO_RELOAD);
+            Invoke(nameof(LoadGameOverScene), TIME_TO_RELOAD);
         }
 
+    }
+
+    public void AumentarVida()
+    {
+        numeroVidas++;
+        numeroVidas = Mathf.Min(numeroVidas, numeroVidasMaximo);
+        GetComponent<UIManager>().CrearVidasUI(numeroVidas, prefabImagenVida, panelVidas);
     }
 
     public void RecogerLLave()
@@ -196,9 +203,9 @@ public class GameManager : MonoBehaviour
         
     }
 
-    private void LoadCoverScene()
+    private void LoadGameOverScene()
     {
-        SceneManager.LoadScene("CoverScene");
+        SceneManager.LoadScene("GameOverScene");
     }
 
     public bool UseVJoystick()

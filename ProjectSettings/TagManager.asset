@@ -23,6 +23,7 @@ TagManager:
   - ZonaDeteccion
   - Diamante
   - Caja
+  - Apple
   layers:
   - Default
   - TransparentFX

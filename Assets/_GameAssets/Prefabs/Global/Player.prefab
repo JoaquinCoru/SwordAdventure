@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 567098090}
   - component: {fileID: 567098092}
   - component: {fileID: 567098091}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4764,7 +4764,7 @@ GameObject:
   m_Component:
   - component: {fileID: 859395755}
   - component: {fileID: 859395756}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4778,13 +4778,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859395754}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7317041, w: 0.68162245}
-  m_LocalPosition: {x: -0.45300007, y: -0.125, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.6848414, w: 0.7286922}
+  m_LocalPosition: {x: -0.091, y: -0.088, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 808191930487724393}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &859395756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4801,7 +4801,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
+  m_Intensity: 1
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -4810,10 +4810,10 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 92.62
-  m_PointLightOuterAngle: 106.23
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1.1935929
+  m_PointLightOuterRadius: 0.6610452
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -4845,13 +4845,12 @@ GameObject:
   - component: {fileID: 808191929911992583}
   - component: {fileID: 808191929911992580}
   - component: {fileID: 808191929911992581}
-  - component: {fileID: 3309097353892757704}
   - component: {fileID: 808191929911992625}
   - component: {fileID: 8234445226383698485}
   - component: {fileID: 8234445226383698472}
   - component: {fileID: 955409560}
   - component: {fileID: 6955512}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
@@ -4886,9 +4885,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.095825434, y: -0.08442053}
+  m_Offset: {x: -0.09653115, y: -0.08230373}
   serializedVersion: 2
-  m_Radius: 0.14973044
+  m_Radius: 0.14690793
 --- !u!82 &808191929911992582
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4901,7 +4900,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.25
+  m_Volume: 0.299
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5101,25 +5100,8 @@ MonoBehaviour:
   audioLand: {fileID: 8300000, guid: a7fd0c7d9e1423c4a90f0c47218c9dc5, type: 3}
   audioInvencible: {fileID: 8300000, guid: 05fca5392932f8f4e9a2c3d0a98f713b, type: 3}
   audioMessage: {fileID: 8300000, guid: abcdd7c7d39473f4d82e5647b0f11e1a, type: 3}
+  audioLevelUp: {fileID: 8300000, guid: 3234d348dad6d354fa0d822b3960329a, type: 3}
   levelCompleted: {fileID: 0}
---- !u!114 &3309097353892757704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 808191929911992624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77ba3d32f26b4fc4bb135594aed9a8fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabProjectile: {fileID: 4365109220067613307, guid: 78060587b1d9b464b8bc496ad1a72b32,
-    type: 3}
-  spawnPoint: {fileID: 3309097353039639930}
-  verticalForce: 65
-  horizontalForce: 200
-  timeBetweenFire: 1
 --- !u!114 &808191929911992625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5207,7 +5189,7 @@ GameObject:
   - component: {fileID: 808191930487724392}
   - component: {fileID: 808191930487724390}
   - component: {fileID: 603976650}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5340,7 +5322,7 @@ MonoBehaviour:
   - {x: -0.32, y: 0.32, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 26166
+  m_InstanceId: -106554
 --- !u!1 &808191930835384832
 GameObject:
   m_ObjectHideFlags: 0
@@ -5351,7 +5333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 808191930835384863}
   - component: {fileID: 808191930835384862}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Base
   m_TagString: Base
   m_Icon: {fileID: 0}
@@ -5407,7 +5389,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3309097353039639930}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5438,7 +5420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8234445226362027518}
   - component: {fileID: 8234445226362027519}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Espada
   m_TagString: Espada
   m_Icon: {fileID: 0}

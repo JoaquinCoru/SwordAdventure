@@ -31,6 +31,16 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Apple"))
+        {
+            psm.PlayAudioLevelUp();
+            GameObject.Find("GameManager").GetComponent<GameManager>().AumentarVida();
+            Destroy(collision.gameObject);
+        }
+    }
+
     public void RecibirDanyo()
     {
         if (gameManager.godMode==false)
@@ -52,6 +62,5 @@ public class PlayerManager : MonoBehaviour
         gameManager.godMode = false;
         psm.PlayLevelMusic();
     }
-
 
 }

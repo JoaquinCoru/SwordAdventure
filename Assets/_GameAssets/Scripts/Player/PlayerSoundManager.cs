@@ -13,6 +13,7 @@ public class PlayerSoundManager : MonoBehaviour
     public AudioClip audioLand;
     public AudioClip audioInvencible;
     public AudioClip audioMessage;
+    public AudioClip audioLevelUp;
 
     //public AudioClip audioDead;
     public AudioClip levelCompleted;
@@ -71,6 +72,11 @@ public class PlayerSoundManager : MonoBehaviour
     public void PlayAudioMessage()
     {
         audioSource.PlayOneShot(audioMessage);
+    }
+
+    public void PlayAudioLevelUp()
+    {
+        audioSource.PlayOneShot(audioLevelUp);
     }
 
     

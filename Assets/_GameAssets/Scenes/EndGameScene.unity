@@ -1426,8 +1426,9 @@ GameObject:
   - component: {fileID: 2054249011}
   - component: {fileID: 2054249013}
   - component: {fileID: 2054249012}
+  - component: {fileID: 2054249014}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImageCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1449,7 +1450,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 17.4, y: 0}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2054249012
@@ -1489,6 +1490,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054249010}
   m_CullTransparentMesh: 0
+--- !u!114 &2054249014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054249010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f81cd0485079343bd3511c0bf43447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: d352c57d606025b42a482732fad1ee23, type: 3}
+  - {fileID: 21300000, guid: 33bebbf1e1d0de443b6e3c747b7153af, type: 3}
+  - {fileID: 21300000, guid: 4363547a41f5e414889c1bcc3b977dbd, type: 3}
+  - {fileID: 21300000, guid: 13dba56839610f74099bad2bce991875, type: 3}
+  - {fileID: 21300000, guid: 098e573c23388d64184594f1138a4d9c, type: 3}
+  - {fileID: 21300000, guid: 32cfbb8fa291a6b4fa45d5fa1313bdeb, type: 3}
+  - {fileID: 21300000, guid: 3605f37fd19f97141a3f3518d4240d87, type: 3}
+  - {fileID: 21300000, guid: b77bc371750c4514081ad28e6bd004eb, type: 3}
+  - {fileID: 21300000, guid: b09600ec070853546ad0da32432083f0, type: 3}
+  - {fileID: 21300000, guid: f1f594581067f504fb4075c6cb76933a, type: 3}
+  - {fileID: 21300000, guid: d99c4a149051aca4c95535cad0421921, type: 3}
+  - {fileID: 21300000, guid: a08732e5453b2d448931ef10148f34e2, type: 3}
+  spritePerFrame: 30
+  loop: 1
+  destroyOnEnd: 0
 --- !u!1 &539721531191721514
 GameObject:
   m_ObjectHideFlags: 0
